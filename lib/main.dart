@@ -18,8 +18,8 @@ class _loginappState extends State<loginapp> with SingleTickerProviderStateMixin
   Animation<double>? iconanimation;
   void initState(){
     super.initState();
-    iconanimationcontroller=new AnimationController(vsync: this,duration: Duration(milliseconds: 500));
-    iconanimation=new CurvedAnimation(parent: iconanimationcontroller!, curve: Curves.bounceOut);
+    iconanimationcontroller=new AnimationController(vsync: this,duration: Duration(milliseconds: 1000));
+    iconanimation=new CurvedAnimation(parent: iconanimationcontroller!, curve: Curves.bounceInOut);
     iconanimation!.addListener(()=> this.setState(() {}));
     iconanimationcontroller!.forward();
 
